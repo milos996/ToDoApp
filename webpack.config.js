@@ -29,7 +29,8 @@ module.exports = {
           }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig,
+  plugins: [
+    HtmlWebpackPluginConfig,
     new ExtractTextPlugin({ filename: 'style.css', disable: false, allChunks: true })
       ]
 }

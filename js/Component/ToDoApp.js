@@ -41,7 +41,7 @@ export default class ToDoApp extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="col-sm-4">
         <InputGroup addItem = { this.addItem } />
         <ShowList items = { this.props.items } filter = { this.props.filter } completeItem = { this.completeItem } />
         <FilterGroup setFilter = { this.setFilter} filter = { this.props.filter } />

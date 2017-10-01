@@ -25,7 +25,7 @@
                                 id : state.currentID + 1
                             }
                 ],
-                currentID: ++currentID
+                currentID: ++(state.currentID)
               };
             break;
             //Set another filter
@@ -38,9 +38,10 @@
             //When user click on item we check it as done
           case "COMPLETE_ITEM":
                 let {id} = action.payload;
+
                 let newItems = state.items.map((val) => {
-                      if(val.id === id ){
-                          return {
+                      if(val.id == id ){
+                            return {
                               ...val,
                               completed: true
                           };
