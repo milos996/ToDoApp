@@ -1,7 +1,16 @@
+  const itemsCurrent = [{
+    task:  "First",
+    completed : false,
+    id : 0
+  },{
+    task:  "Second",
+    completed : false,
+    id : 1
+  },]
 
   export default function reducer(state={
-        items : [],
-        currentID : 0,
+        items : itemsCurrent,
+        currentID : 1,
         filter : "all"
   }, action ) {
 
@@ -16,7 +25,7 @@
                                 id : state.currentID + 1
                             }
                 ],
-                ++currentID
+                currentID: ++currentID
               };
             break;
             //Set another filter
