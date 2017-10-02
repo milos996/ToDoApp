@@ -18,12 +18,12 @@ export default class ShowList extends React.Component{
       let filter = this.props.filter;
 
       let list = my_item.map((val) => {
-            if(filter === "completed"){
+            if(filter.toLowerCase() === "completed"){
                 // Only completed ones
                   if(val.completed)
-                        return(<li key={val.id} id={val.id} className="list-group-item" onClick={this.handleToggle}> {val.task} { val.completed ? <span className="glyphicon glyphicon-ok" aria-hidden="true"></span> : null} </li>);
+                        return(<li key={val.id} id={val.id} className="list-group-item" onClick={this.handleToggle}> {val.task} { val.completed ? <span className="glyphicon glyphicon-ok" aria-hidden="true"></span> : null}  </li>);
 
-            }else if(filter === "active"){
+            }else if(filter.toLowerCase() === "active"){
               //Only active ones
                   if(!val.completed)
                         return(<li key={val.id} id={val.id} className="list-group-item" onClick={this.handleToggle}> {val.task}  { val.completed ? <span className="glyphicon glyphicon-ok" aria-hidden="true"></span> : null} </li>);

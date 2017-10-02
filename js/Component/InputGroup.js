@@ -12,6 +12,7 @@ export default class InputGroup extends React.Component{
     onClick(e){
 
       let newText = document.getElementById("newItem").value;
+      document.getElementById("newItem").value = "";
       this.props.addItem(newText);
 
     }
